@@ -6,13 +6,13 @@
 
 ## Description
 
-_This is a web application that takes a number from a user and returns a range of numbers from 1 to the chosen number with the following exceptions:
+This is a web application that takes a number from a user and returns a range of numbers from 1 to the chosen number with the following exceptions:
 
 * Numbers divisible by 3 are replaced with "ping"
 * Numbers divisible by 5 are replaced with "pong"
 * Numbers divisible by 15 are replaced with "ping-pong"
 
-A user can enter a new number and see new results over and over again._
+A user can enter a new number and see new results over and over again.
 
 ## Specifications
 | behavior |  input   |  output  |
@@ -20,15 +20,15 @@ A user can enter a new number and see new results over and over again._
 |The program takes a number from the user and stores this as a variable| 5 | userInput = 5 |
 |The program checks if user input is an integer greater than 0, if not the program returns Invalid | -2 | Invalid Input |
 |The program returns an array with the range of numbers from 1 to the user input number | 3 | [1, 2, 3] |
-|Check for numbers divisible by three|||
+|DIVISIBLE BY THREE SECTION|||
 |The program loops through the array to find the first number divisible by three, if none identified the program does nothing | 3 | 3 |
 |The program takes the identified number and replaces it with "ping" in the original array | 3 | [1, 2, "ping"] |
 |The program loops through all elements in the array to replace all numbers divisible by three with "ping"| 6 | [1, 2, "ping", 4, 5, "ping"] |
-|Check for numbers divisible by five|||
+|DIVISIBLE BY FIVE SECTION|||
 |The program loops through the array to find the first number divisible by five, if none identified the program does nothing | 5 | 5 |
 |The program takes the identified number and replaces it with "pong" in the original array | 5 | [1, 2, "ping", 4, "pong"] |
 |The program loops through all elements in the array to replace all numbers divisible by five with "pong"| 10 | [1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong"] |
-|Check for numbers divisible by fifteen|||
+|DIVISIBLE BY FIFTEEN SECTION|||
 |The program loops through the array to find the first number divisible by fifteen, if none identified the program does nothing | 15 | 15 |
 |The program takes the identified number and replaces it with "ping-pong" in the original array | 15 | [1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "ping-pong"] |
 |The program loops through all elements in the array to replace all numbers divisible by fifteen with "ping-pong"| 15 | [1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "ping-pong"] |

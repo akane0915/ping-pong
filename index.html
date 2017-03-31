@@ -9,6 +9,25 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
+    <div class="jumbotron">
+      <h1>Ping-Pong</h1>
+    </div>
+    <div class="container">
+      <h3>Rules:</h3>
+      <ol>
+        <li>Numbers divisible by 3 are replaced with "ping"</li><br>
+        <li>Numbers divisible by 5 are replaced with "pong"</li><br>
+        <li>Numbers divisible by 15 are replaced with "ping-pong"</li><br>
+      </ol>
+      <form id="ppform">
+        <label for="ppinput">Enter your number: </label>
+        <input id="ppinput" type="text">
+        <button class="btn btn-success" type="submit">Let's Play!</button>
+      </form>
+      <div id="ppoutput">
+
+      </div>
+    </div>
 
   </body>
 </html>
