@@ -79,5 +79,9 @@ $(document).ready(function(){
       }
     });//Reverse button submit close
 
+    //Reset button
+    $("#reload").click(function(){
+      location.reload();
+    });
   }); //Submit form close
 }); //Document.ready function close
