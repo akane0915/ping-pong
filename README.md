@@ -12,10 +12,10 @@ This is a web application that takes a number from a user and returns a range of
 * Numbers divisible by 5 are replaced with "pong"
 * Numbers divisible by 15 are replaced with "ping-pong"
 
-A user can enter a new number and see new results over and over again. The user input only accepts integers greater than 0.
+A user can enter a new number and see new results over and over again. The user input only accepts integers greater than 0.  There is a reset button.  There is also a reverse the list button which appears one the user has submitted a number.  This button allows the user to reverse the list of results.
 
 ## Specifications
-| behavior |  input   |  output  |
+| Behavior |  Input   |  Output  |
 |----------|:--------:|:--------:|
 |The program takes a number from the user and stores this as a variable| 5 | 5 |
 |The user should be able to enter a new number and see new results over and over again.| 3 (assuming previous results already displayed) | 3 |
