@@ -28,14 +28,29 @@ var ping = function(array){
   return changedArray;
 };
 
+//Create new array with all values divisible by 5 replaced with "pong"
+var pong = function(array){
+  var changedArray = [];
+  array.forEach(function(number){
+    if (number % 5 === 0){
+      changedArray.push("pong");
+    } else {
+      changedArray.push(number);
+    }
+  });
+  return changedArray;
+};
+
 //User Interface Logic
 $(document).ready(function(){
   $("form#ppform").submit(function(event){
     event.preventDefault();
     let userInput = $("input#ppinput").val();
 
-    $("#ppoutput").text(ping(createArray(userInput)));
-    console.log(createArray(userInput));
+    $("#ppoutput").text(pong(ping(createArray(userInput))));
+    console.log("createArray = " + createArray(userInput));
+    console.log("ping = " + ping(createArray(userInput)));
+    console.log("pong = " + pong(ping(createArray(userInput))));
     $("#ppoutput").text(posInteger(userInput));
   }); //Submit form close
 }); //Document.ready function close
