@@ -58,13 +58,15 @@ var ping = function(array){
 $(document).ready(function(){
   $("form#ppform").submit(function(event){
     event.preventDefault();
-    let userInput = $("input#ppinput").val();
+    $("#ppoutput").text(""); //Clear output section
+    var userInput = $("input#ppinput").val();
+    var finalArray = ping(pong(pingPong(createArray(userInput))));
 
-    $("#ppoutput").text(ping(pong(pingPong(createArray(userInput))))); //Must call pingPong first because divisible by 15 must be evaluated before divisible by 5 or 3
-    console.log("createArray = " + createArray(userInput));
-    console.log("ping = " + ping(pong(pingPong(createArray(userInput)))));
-    console.log("pong = " + pong(pingPong(createArray(userInput))));
-    console.log("ping-pong = " + pingPong(createArray(userInput)));
+    //Append each element of array in an unordered list
+    for (var i=0; i<finalArray.length; i++){
+      $("#ppoutput").append("<li>"+finalArray[i]+"</li>");
+    }
+    //Display invalid if input is not a positive integer
     $("#ppoutput").text(posInteger(userInput));
   }); //Submit form close
 }); //Document.ready function close
