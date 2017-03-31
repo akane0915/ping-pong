@@ -15,12 +15,12 @@ var createArray = function(number) {
   return startArray;
 };
 
-//Create new array with all values divisible by 3 replaced with "ping"
-var ping = function(array){
+//Create new array with all values divisible by 15 replaced with "ping-pong"
+var pingPong = function(array){
   var changedArray = [];
   array.forEach(function(number){
-    if(number % 3 === 0){
-      changedArray.push("ping");
+    if (number % 15 === 0){
+      changedArray.push("ping-pong");
     } else {
       changedArray.push(number);
     }
@@ -41,16 +41,30 @@ var pong = function(array){
   return changedArray;
 };
 
+//Create new array with all values divisible by 3 replaced with "ping"
+var ping = function(array){
+  var changedArray = [];
+  array.forEach(function(number){
+    if(number % 3 === 0){
+      changedArray.push("ping");
+    } else {
+      changedArray.push(number);
+    }
+  });
+  return changedArray;
+};
+
 //User Interface Logic
 $(document).ready(function(){
   $("form#ppform").submit(function(event){
     event.preventDefault();
     let userInput = $("input#ppinput").val();
 
-    $("#ppoutput").text(pong(ping(createArray(userInput))));
+    $("#ppoutput").text(ping(pong(pingPong(createArray(userInput))))); //Must call pingPong first because divisible by 15 must be evaluated before divisible by 5 or 3
     console.log("createArray = " + createArray(userInput));
-    console.log("ping = " + ping(createArray(userInput)));
-    console.log("pong = " + pong(ping(createArray(userInput))));
+    console.log("ping = " + ping(pong(pingPong(createArray(userInput)))));
+    console.log("pong = " + pong(pingPong(createArray(userInput))));
+    console.log("ping-pong = " + pingPong(createArray(userInput)));
     $("#ppoutput").text(posInteger(userInput));
   }); //Submit form close
 }); //Document.ready function close
