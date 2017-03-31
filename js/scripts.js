@@ -68,5 +68,16 @@ $(document).ready(function(){
     }
     //Display invalid if input is not a positive integer
     $("#ppoutput").text(posInteger(userInput));
+
+    //Reverse order button
+    $("button#reverse-button").show();
+    $("form#reverse-list").submit(function(event){
+      event.preventDefault();
+      $("#ppoutput").text("");
+      for (var i=0; i<finalArray.length; i++){
+        $("#ppoutput").prepend("<li>"+finalArray[i]+"</li>");
+      }
+    });//Reverse button submit close
+
   }); //Submit form close
 }); //Document.ready function close
