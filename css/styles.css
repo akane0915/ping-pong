@@ -1,0 +1,21 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.jumbotron {
+  background-image: url(../img/jumbotron.jpeg);
+  background-size: contain;
+  min-height: 300px;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  padding-top: 150px;
+  font-size: 100px;
+  color: white;
+  text-outline:
+}
