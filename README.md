@@ -18,8 +18,22 @@ A user can enter a new number and see new results over and over again._
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
 |The program takes a number from the user and stores this as a variable| 5 | userInput = 5 |
-|The program only accepts integers greater than 0 | -2 | Invalid Input |
-|----------|:--------:|:--------:|
+|The program checks if user input is an integer greater than 0, if not the program returns Invalid | -2 | Invalid Input |
+|The program returns an array with the range of numbers from 1 to the user input number | 3 | [1, 2, 3] |
+|Check for numbers divisible by three|||
+|The program loops through the array to find the first number divisible by three, if none identified the program does nothing | 3 | 3 |
+|The program takes the identified number and replaces it with "ping" in the original array | 3 | [1, 2, "ping"] |
+|The program loops through all elements in the array to replace all numbers divisible by three with "ping"| 6 | [1, 2, "ping", 4, 5, "ping"] |
+|Check for numbers divisible by five|||
+|The program loops through the array to find the first number divisible by five, if none identified the program does nothing | 5 | 5 |
+|The program takes the identified number and replaces it with "pong" in the original array | 5 | [1, 2, "ping", 4, "pong"] |
+|The program loops through all elements in the array to replace all numbers divisible by five with "pong"| 10 | [1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong"] |
+|Check for numbers divisible by fifteen|||
+|The program loops through the array to find the first number divisible by fifteen, if none identified the program does nothing | 15 | 15 |
+|The program takes the identified number and replaces it with "ping-pong" in the original array | 15 | [1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "ping-pong"] |
+|The program loops through all elements in the array to replace all numbers divisible by fifteen with "ping-pong"| 15 | [1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "ping-pong"] |
+|The user should be able to enter a new number and see new results over and over again.| 3 (assuming previous results already displayed) | [1, 2, "ping"] |
+
 
 ## Setup/Installation Requirements
 
